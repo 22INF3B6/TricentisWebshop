@@ -1,0 +1,16 @@
+# Project description file
+
+project.name=TricentisWebshop
+project.version=8.3
+project.original.version=8.3
+product.name=NeoLoad
+product.original.name=NeoLoad
+product.version=7.11.1
+product.original.version=7.11.1
+project.is-open-test-settings-after-upload=true
+project.id=9a57b2f3-4a6c-4afa-bd68-d4a8376f63af
+project.config.path=config.zip
+project.config.storage=ZIP
+team.server.enabled=false
+project.workspace=619a8bb4ca2d153946f370a4
+project.test-settings=4b97ea75-50af-4ccf-b157-7e1ce95b95a3
