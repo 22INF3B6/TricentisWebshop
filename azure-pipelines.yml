@@ -1,0 +1,17 @@
+pool:
+  name: Azure Pipelines
+steps:
+- task: DockerInstaller@0
+  displayName: 'Install Docker 17.09.0-ce'
+
+- script: |
+   docker run --rm \
+      -v "$(Build.Repository.LocalPath)https://github.com/22INF3B6/TricentisWebshop.git":/ \
+      -e SCENARIO_NAME=scenario1 \
+      -e NEOLOADWEB_TOKEN=1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c \
+      -e TEST_NAME=CI-TestGetPaymentMethodCollection \
+      -e CONTROLLER_ZONE_ID=defaultzone  \
+      -e LG_ZONE_IDS=<ZoneID#1>:<LG count#1>, <ZoneID#2>:<LG count#2>  \
+      neotys/neoload-web-test-launcher:latest
+   
+  displayName: 'Launch NeoLoad test'
