@@ -6,7 +6,7 @@ steps:
 
 - script: |
    docker run --rm \
-      -v "$(Build.Repository.LocalPath)":/ \
+      -v "$(Build.Repository.LocalPath)":https://github.com/22INF3B6/TricentisWebshop.git \
       -e SCENARIO_NAME=scenario1 \
       -e NEOLOADWEB_TOKEN=1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c \
       -e TEST_NAME=CI-TestGetPaymentMethodCollection \
