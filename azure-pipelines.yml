@@ -10,8 +10,6 @@ steps:
       -e SCENARIO_NAME=scenario1 \
       -e NEOLOADWEB_TOKEN=1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c \
       -e TEST_NAME=CI-TestGetPaymentMethodCollection \
-      -e CONTROLLER_ZONE_ID=defaultzone  \
-      -e LG_ZONE_IDS=defaultzone:1 \
       neotys/neoload-web-test-launcher:latest
    
   displayName: 'Launch NeoLoad test'
