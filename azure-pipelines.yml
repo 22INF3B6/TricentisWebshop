@@ -6,8 +6,7 @@ steps:
 
 - script: |
    docker run --rm \
-      -v "$(Build.Repository.LocalPath)/neoload-project/archive":/neoload-project \
-      -e NEOLOAD_PROJECT_URL=https://github.com/22INF3B6/TricentisWebshop/blob/main/TricentisWebshop.zip \
+      -v "$(Build.Repository.LocalPath)":/TricentisWebshop \
       -e SCENARIO_NAME=scenario1 \
       -e NEOLOADWEB_TOKEN=1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c \
       -e TEST_RESULT_NAME=GetPaymentMethodCollection \
