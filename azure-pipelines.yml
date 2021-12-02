@@ -10,7 +10,7 @@ steps:
       -e SCENARIO_NAME=scenario1 \
       -e NEOLOADWEB_TOKEN=1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c \
       -e TEST_RESULT_NAME=GetPaymentMethodCollection \
-      -e CONTROLLER_ZONE_ID=defaultzone \
+      -e CONTROLLER_ZONE_ID=localhost \
       -e LG_ZONE_IDS=localhost:7100 \
       neotys/neoload-web-test-launcher:latest
    
