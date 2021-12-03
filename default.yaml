@@ -1,0 +1,40 @@
+name: NeoLoad-CLI-example-2_0
+
+variables:
+- file:
+    name: Credentials
+    column_names: ["username"],["password"]
+    is_first_line_column_names: false
+    start_from_line: 1
+    delimiter: ","
+    path: data/credentials.csv
+    change_policy: each_iteration
+    scope: global
+    order: any
+    out_of_value: cycle
+
+servers:
+- name: demowebshop.tricentis.com
+  host: demowebshop.tricentis.com
+  scheme: https
+
+sla_profiles: # defaults for dev/qa systems; can be overridden by additional slas/uat...
+- name: Profile
+  description: Avg Resp Time >=1000ms >= 25000ms for cached queries
+  thresholds:
+  - avg-resp-time warn >= 2000ms fail
+  - error-rate warn >= 3000ms fail 
+
+populations:
+- name: Population1
+
+scenarios:
+- name: scenario1
+  populations:
+  - name: popGets
+    rampup_load:
+      min_users: 1
+      max_users: 5
+      increment_users: 1
+      increment_every: 20s
+      duration: 2m
