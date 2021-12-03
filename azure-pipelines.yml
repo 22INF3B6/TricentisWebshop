@@ -9,7 +9,7 @@ parameters:
   default: 'https://neoload-api.saas.neotys.com/'
 - name: neoloadToken
   type: string
-  default: 'specify_token_or_get_it_from_credentials'
+  default: '1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c'
 - name: zoneId
   type: string
   default: 'defaultzone'
@@ -38,8 +38,8 @@ jobs:
       targetType: 'inline'
       script: |
         neoload login --url ${{parameters.neoloadApiUrl}} ${{parameters.neoloadToken}} \
-                test-settings --zone ${{parameters.zoneId}} --scenario sanityScenario patch "My Azure Test With CLI" \
-                project --path tests/neoload_projects/example_1/ upload "My Azure Test With CLI"
+                test-settings --zone ${{parameters.zoneId}} --scenario scenario1 patch "My Azure Test With CLI"\
+                project --path . upload "My Azure Test With CLI"
 
   - task: Bash@3
     displayName: Run the NeoLoad test
