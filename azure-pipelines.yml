@@ -9,7 +9,7 @@ parameters:
   default: 'https://neoload-api.saas.neotys.com/'
 - name: neoloadToken
   type: string
-  default: '1f06e59572b75d60417b5215ad9abfa43768b6508ddccb8c'
+  default: 'specify_token_or_get_it_from_credentials'
 - name: zoneId
   type: string
   default: 'defaultzone'
