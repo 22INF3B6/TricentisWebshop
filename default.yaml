@@ -31,7 +31,7 @@ populations:
 scenarios:
 - name: scenario1
   populations:
-  - name: popGets
+  - name: Population1
     rampup_load:
       min_users: 1
       max_users: 5
