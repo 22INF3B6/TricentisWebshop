@@ -40,7 +40,7 @@ jobs:
       script: |
         neoload login --url ${{parameters.neoloadApiUrl}} ${{parameters.neoloadToken}} \
                 test-settings --zone ${{parameters.zoneId}} --scenario scenario1 patch "TestGetPaymentMethodCollection"\
-                project --path .  upload "TestGetPaymentMethodCollection"
+                project --path . upload "TestGetPaymentMethodCollection"
 
   - task: Bash@3
     displayName: Run the NeoLoad test
