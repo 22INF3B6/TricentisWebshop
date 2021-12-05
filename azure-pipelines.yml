@@ -39,7 +39,7 @@ jobs:
       targetType: 'inline'
       script: |
         neoload login --url ${{parameters.neoloadApiUrl}} ${{parameters.neoloadToken}} \
-                test-settings --zone ${{parameters.zoneId}} --scenario scenario1 patch "TestGetPaymentMethodCollection"\
+                test-settings --zone ${{parameters.zoneId}} --scenario scenario1 create "TestGetPaymentMethodCollection"\
                 project --path .  upload "TestGetPaymentMethodCollection"
 
   - task: Bash@3
